@@ -1,0 +1,16 @@
+Estruturas de Dados 
+  - Disciplina ou uma area de Ciência da Computação que estuda algoritmos para melhor gestão memória
+  - Estruturas de Dados Físicos
+    - Variáveis - dependentes das linguagens de programação
+      int do Java é diferente do int do C
+    - Estruturas de Dados abstratas
+      Algoritmos de gestão de memórias
+      Estruturas lineares: 
+        - Vetores (matriz de 1 dimensão)
+        - Pilha (Stack): inserção, remoção, estaVazia, tamanho, localizar, topo
+        - Fila (Queue): inserção, remoção, estaVazia, tamanho, localizar, primeiro, ultimo
+        - Lista (List, linked list, array list, vector...): inserção, remoção, estaVazia, tamanho, localizar
+      Estruturas não lineares:
+        - Matrizes de N dimensões 
+        - Árvore (Tree): inserção, remoção, estaVazia, localizar, *busca*
+        - Grafo (Graph): inserção, remoção, caminho, melhorCaminho, 
