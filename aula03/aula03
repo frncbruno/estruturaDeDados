@@ -1,0 +1,56 @@
+          Estruturas de Dados
+  Físicas: variáveis das linguagens de programação: int, float, char, string, vetores, matrizes,...
+  Abstratas: 
+    lista
+      - C++   vector
+      - Java   ArrayList, List, LinkedList
+      - C#   List, ArrayList
+      - Python  List
+    pilha
+    fila
+    arvore
+    grafo
+    - Algoritmos de gestão de memória: guardar/armazenar e buscar/pesquisar da melhor forma possível (eficiência)
+      - Operações clássicas: 
+        - inserir
+          - C++   push_back()
+          - Java  add()
+          - C#  Add()
+          - Python  append()
+        - remover pela posição ou pelo elemento
+          - C++   pop_back() ou erase()
+          - Java  remove()
+          - C#  Remove()
+          - Python  remove()
+        - verifica tamanho da estrutura
+          - C++   size()
+          - Java  size()
+          - C#  Count
+          - Python  len()
+        - se está vazia
+          - se o tamanho for igual a zero
+          - empty() ou isEmpty()
+        - localizar [5, 9, 7, 2, 5]
+                    TAM = 5
+          - C
+          numero = 5
+          for (int i = 0; i < TAM; i++){
+              if (numero == vetor[i]){
+                  encontrado = true;
+                  break;
+              } 
+            } 
+            if (encontrado) {
+                printf("Numero encontrado");
+            } else {
+                printf("Numero nao encontrado");
+            } 
+
+          - Python
+          [5, 9, 7, 2, 5]
+          numero = 5
+
+          if numero in vetor:
+            print"Encontrado")
+          else: 
+            print("Nao encontrado")
