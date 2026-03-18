@@ -7,6 +7,7 @@ try:
     #abrindo o arquivo no modo leitura
     leitor = open(nome_base, "r", encoding = "utf-8")
 
+    #passando pelo arquivo linha a linha e tratando os objetos da linha
     for linha in leitor:
         dados_linha = linha.split(",")
         obj_clima = Clima(dados_linha[0], dados_linha[1], dados_linha[2], dados_linha[3])
@@ -14,6 +15,7 @@ try:
         if obj_clima not in lista:
           lista.append(obj_clima)
 
+    #exibindo a lista
     for item in lista:
         print(item)
 
