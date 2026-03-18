@@ -1,0 +1,28 @@
+public class Clima {
+    public String ano;
+    public String mes; 
+    public String temperatura;
+    public String precipitacao;
+
+    public Clima(String ano, String mes, String temperatura, String precipitacao) {
+        this.ano = ano;
+        this.mes = mes;
+        this.temperatura = temperatura;
+        this.precipitacao = precipitacao;
+    }
+
+    //reescrevemos tostring para exibir um objeto completo da classe
+    public String toString() {
+        return "Clima [ano=" + this.ano + ", mes=" + this.mes + ", temperatura=" + this.temperatura + ", precipitacao=" + this.precipitacao
+                + "]";
+
+    
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        Clima c = (Clima)obj;
+        return (this.ano.equals(c.ano) && this.mes.equals(c.mes)); // reescreve o método equals para definir os atributos identificadores
+    }
+    
+}
