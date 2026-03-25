@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
@@ -63,15 +64,27 @@ public class Estruturas {
         System.out.println("Digite palavra ou expressão que deseja localizar e remover: ");
         descricao = teclado.nextLine().toUpperCase();
 
-        for (int i = 0; i < lista.size(); i++) {
-            Processo p = lista.get(i);
-            if (p.descricao.contains(descricao)) { 
-                System.out.println("Removendo processo: " + p);
-                lista.remove(i); 
-                i--; 
-            }
+    //     for (int i = 0; i < lista.size(); i++) {
+    //         Processo p = lista.get(i);
+    //         if (p.descricao.contains(descricao)) { 
+    //             System.out.println("Removendo processo: " + p);
+    //             lista.remove(i); 
+    //             i--; 
+    //         }
+    //     }
+    // }
+
+
+    //Usar iterator para evitar problemas ao remover elementos da lista, diferente do for com i normal que pode pular elementos ou causar erros de indexação 
+    Iterator<Processo> iterator = lista.iterator();
+    while (iterator.hasNext()) {
+        Processo p = iterator.next();
+        if (p.descricao.contains(descricao)) {
+            System.out.println("Removendo processo: " + p);
+            iterator.remove(); 
         }
     }
+} 
 
     public static void main(String[] args) {
         // List, ArrayList, LinkedList, Vector
@@ -83,4 +96,4 @@ public class Estruturas {
         Estruturas.localizarRemover(lista);
         Estruturas.exibirProcessos(lista);
 }
-} 
+}
