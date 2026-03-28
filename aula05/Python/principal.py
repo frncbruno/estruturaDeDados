@@ -1,49 +1,39 @@
 from clima import Clima
-lista = []
 
+lista = []
 nome_base = "base.csv"
 
-try: 
-    #abrindo o arquivo no modo leitura
-    leitor = open(nome_base, "r", encoding = "utf-8")
+try:
+    leitor = open(nome_base, "r", encoding="utf-8")
 
-    #passando pelo arquivo linha a linha e tratando os objetos da linha
     for linha in leitor:
         dados_linha = linha.split(",")
-        obj_clima = Clima(dados_linha[0], dados_linha[1], dados_linha[2], dados_linha[3])
-        
+        obj_clima = Clima(dados_linha[0], dados_linha[1], dados_linha[2], dados_linha[3].strip())
+
         if obj_clima not in lista:
-          lista.append(obj_clima)
+            lista.append(obj_clima)
 
-    #exibindo a lista
-    for item in lista:
-        print(item)
-
-    #fechando o arquivo
     leitor.close()
+
+    # Contar quantas vezes cada mês foi "Quente"
+    contagem = {}
+
+    for item in lista:
+        if item.temperatura == "Quente":
+            if item.mes not in contagem:
+                contagem[item.mes] = 0
+            contagem[item.mes] += 1
+
+    # Achar o mês com maior contagem
+    mes_mais_quente = ""
+    maior_contagem = 0
+
+    for mes, qtd in contagem.items():
+        if qtd > maior_contagem:
+            maior_contagem = qtd
+            mes_mais_quente = mes
+
+    print(f"Mês mais quente: {mes_mais_quente} ({maior_contagem} vezes)")
 
 except Exception as e:
     print("Ocorreu algum erro...", e)
-
-#lista = []
-
-# primeira linha
-# linha = "2020,Janeiro,Quente,muita"
-# dados_linha = linha.split(",")
-
-# obj_clima = Clima(dados_linha[0], dados_linha[1], dados_linha[2], dados_linha[3])
-
-# if obj_clima not in lista:
-#     lista.append(obj_clima)
-
-# #segunda linha
-# linha = "2020,Janeiro,Frio,pouca"
-# dados_linha = linha.split(",")
-
-# obj_clima = Clima(dados_linha[0], dados_linha[1], dados_linha[2], dados_linha[3])
-
-# if obj_clima not in lista:
-#     lista.append(obj_clima)
-
-# for c in lista:
-#     print(c)
