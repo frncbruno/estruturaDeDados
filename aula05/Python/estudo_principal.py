@@ -8,7 +8,7 @@ try:  # tenta executar o código abaixo, se der erro vai pro "except"
 
     for linha in leitor:  # passa por cada linha do arquivo, uma por vez
         dados_linha = linha.split(",")  # separa a linha nas vírgulas, virando uma lista (ex: ["2020", "Janeiro", "Quente", "muita"])
-        obj_clima = Clima(dados_linha[0], dados_linha[1], dados_linha[2], dados_linha[3].strip())  # cria um objeto Clima com os 4 dados da linha. O .strip() remove o "\n" (quebra de linha) do final
+        obj_clima = Clima(dados_linha[0], dados_linha[1], dados_linha[2], dados_linha[3])  # cria um objeto Clima com os 4 dados da linha.
 
         if obj_clima not in lista:  # verifica se esse objeto já está na lista (usa o __eq__ da classe)
             lista.append(obj_clima)  # se não estiver, adiciona o objeto na lista
