@@ -15,7 +15,6 @@ try:
 
     leitor.close()
 
-    # Contar quantas vezes cada mês foi "Quente"
     contagem = {}
 
     for item in lista:
@@ -23,8 +22,7 @@ try:
             if item.mes not in contagem:
                 contagem[item.mes] = 0
             contagem[item.mes] += 1
-
-    # Achar o mês com maior contagem
+            
     mes_mais_quente = ""
     maior_contagem = 0
 
