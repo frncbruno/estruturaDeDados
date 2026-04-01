@@ -26,7 +26,7 @@ public class Colecoes {
         }
 
         //usar para alterar a lista
-        Iterator<E> i = lista.iterator();
+        Iterator i = lista.iterator();
         while (i = hasNext()){
             System.out.println(i.next());
         }
