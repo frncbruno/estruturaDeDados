@@ -13,8 +13,9 @@ public class Colecoes {
         System.out.println(lista);
         lista.remove((Integer)100);
 
-        //alternativa 1
         System.out.println(lista.contains(123));
+
+        //alternativa 1
         for (int i = 0; i < lista.size(); i++){ 
             System.out.println(lista.get(i));
         }
