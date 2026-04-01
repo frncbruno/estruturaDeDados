@@ -1,0 +1,24 @@
+Coleções são estruturas de Dados Abstratas
+  - List -> Vector, ArrayList, LinkedList
+    - listas para armazenamento de dados, remoção, busca e relatórios
+
+  - Stack (pilha) -> LIFO -> Last In, First Out -> O último que entra é o primeiro a sair
+    - TOPO - peek
+    - Há somente duas operações clássicas: REMOVER do topo e INSERIR no topo
+    - push(): inserir
+    - pop(): remover - NÃO SE ESCOLHE QUEM SERÁ REMOVIDO! A REMOÇÃO ACONTECE SOMENTE NO TOPO
+  - Outros métodos básicos:
+    - peek(): mostra o topo
+    - size(): mostra o tamanho
+    - isEmpty(): verifica se vazia
+    - contains(): procura por um elemento na pilha
+
+  - Queue (fila) -> FIFO - First In, First Out -> o primeiro que chega é o primeiro a sair
+  - DOIS PONTEIROS: um para a cabeça/início (remover); outro para a cauda/fim (inserir)
+  - Novamente, há somente duas operações clássicas: REMOVER da cabeça e INSERIR na cauda
+    - add()
+    - remove()
+  - Outros métodos básicos:
+    - size(): mostra o tamanho
+    - isEmpty(): verifica se vazia
+    - contains(): procura por um elemento na pilha
