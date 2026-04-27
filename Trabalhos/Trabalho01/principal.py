@@ -8,22 +8,19 @@ try:
 
     for linha in leitor:
         dados = linha.strip().split(",")
-        
-        if dados[0] == "Nome":
-            continue
 
         aluno = Aluno(dados[0], dados[1], dados[2], dados[3])
         lista.append(aluno)
 
     leitor.close()
 
-    lista.sort(key=lambda x: x.nome)
+    lista.sort(key=lambda x: x.ano_ingresso)
 
-    print("Lista ordenada por nome:")
+    print("Lista ordenada por ano:")
     for a in lista:
         print(a)
 
-    nome_busca = input("\nDigite o nome exato do aluno: ")
+    nome_busca = input("\nDigite o nome exato: ")
     encontrado = False
 
     for a in lista:
@@ -33,7 +30,7 @@ try:
             encontrado = True
 
     if not encontrado:
-        print("Aluno não encontrado.")
+        print("Aluno não encontrado")
 
     contagem = {}
 
@@ -42,7 +39,7 @@ try:
             contagem[a.ano_ingresso] = 0
         contagem[a.ano_ingresso] += 1
 
-    print("\nQuantidade de alunos por ano:")
+    print("\nAlunos por ano:")
     for ano, qtd in contagem.items():
         print(f"{ano}: {qtd}")
 
