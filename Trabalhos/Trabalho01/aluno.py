@@ -6,4 +6,4 @@ class Aluno:
         self.ano_ingresso = ano_ingresso
 
     def __str__(self):
-        return f"Nome:{self.nome} | Curso:{self.curso} | Sexo:{self.sexo} | Ano:{self.ano_ingresso}"
+        return f"Nome:{self.nome}, Curso:{self.curso}, Sexo:{self.sexo}, Ano:{self.ano_ingresso}"
