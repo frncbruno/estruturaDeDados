@@ -1,8 +1,8 @@
-// Recursão é um recurso computacional de programação que substitui as instruções de repetição (for-while)
-// Toda repetição obedece 3 pontos:
-    // 1. Inicialização da variável de controle
-    // 2. Teste de parada com a variável de controle
-    // 3. Transformação da variável de controle
+//Exercicios de fixação sobre o código base gerado:
+// 1. receba uma lista, seu tamanho, valor de pesquisa. caso o valor de pesquisa ocorra na lista, retornar quantas vezes ele aparece
+// 2. receba uma lista, seu tamanho, valor de pesquisa, valor de substituição. caso o valor ocorra na lista, substituir o valor de pesquisa pelo valor de substiuição
+// 3. receba uma lista, seu tamanho e retorne TRUE se a lista ordenada, FALSE se a lista desordenada
+// 4. receba uma lista e seu tamanho. o método deve exibir todos os números múltiplos de 4.
 
 import java.util.ArrayList;
 import java.util.Random;
